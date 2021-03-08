@@ -1,5 +1,3 @@
-using System;
-
 namespace DataModels
 {
     public class ErrorViewModel

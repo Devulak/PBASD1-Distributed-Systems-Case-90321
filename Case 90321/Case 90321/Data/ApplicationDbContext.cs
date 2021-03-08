@@ -1,4 +1,6 @@
-﻿using DataModels;
+﻿using Bogus;
+using Bogus.Extensions;
+using DataModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -23,6 +25,11 @@ namespace Case_90321.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            FakeData fd = new FakeData();
+
+            builder.Entity<ClothingType>().HasData(fd.ClothingTypes);
+            builder.Entity<Product>().HasData(fd.Products);
         }
     }
 }
