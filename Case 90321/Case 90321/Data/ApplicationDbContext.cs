@@ -1,11 +1,6 @@
-﻿using Bogus;
-using Bogus.Extensions;
-using DataModels;
+﻿using DataModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Case_90321.Data
 {
